@@ -59,6 +59,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Web\Cookie\Information.cs" />
+    <Compile Include="Web\Log\Log.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Web\UI\Page.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

@@ -39,9 +39,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Paidev.Framework">
-      <HintPath>..\Paidev.Framework\bin\Debug\Paidev.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.Json" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -128,6 +125,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Xml\XmlTest01.aspx" />
+    <Content Include="_Sample\Log\FileLog.aspx" />
+    <Content Include="_Sample\Log\Log.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AngularJs\angularTest01.aspx.cs">
@@ -259,6 +258,13 @@
     <Compile Include="Xml\XmlTest01.aspx.designer.cs">
       <DependentUpon>XmlTest01.aspx</DependentUpon>
     </Compile>
+    <Compile Include="_Sample\Log\FileLog.aspx.cs">
+      <DependentUpon>FileLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="_Sample\Log\FileLog.aspx.designer.cs">
+      <DependentUpon>FileLog.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Master\PaidevMaster01.Master" />
@@ -270,7 +276,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Paidev.Framework\Paidev.Framework.csproj">
+      <Project>{bdce24d7-57df-4389-877e-290e40853e36}</Project>
+      <Name>Paidev.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\Content.en-US.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
@@ -288,6 +299,9 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Content.Designer.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Sample\Log\TxtLog\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

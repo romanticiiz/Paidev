@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE1E37E0-8C68-4415-A52C-81FFB28A6947}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Paidev.Web</RootNamespace>
+    <AssemblyName>Paidev.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Paidev.Framework">
+      <HintPath>..\Paidev.Framework\bin\Debug\Paidev.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Json" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AngularJs\angularTest01.aspx" />
+    <Content Include="Cookie\CookieTest01.aspx" />
+    <Content Include="Css\reset.css" />
+    <Content Include="Css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Css\smoothness\include\ui-1.10.0\ui-lightness\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Css\smoothness\jquery-ui-1.10.0.custom.css" />
+    <Content Include="Css\smoothness\jquery-ui-1.10.0.custom.min.css" />
+    <Content Include="Css\smoothness\jquery.ui.timepicker.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest01.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest02.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest03.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest04.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest05.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest06.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest07.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest08.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest09.html" />
+    <Content Include="DocumentObjectModel_DOM\1_10\domTest10.html" />
+    <Content Include="DocumentObjectModel_DOM\domTest01.html" />
+    <Content Include="Etc\Delegate.aspx" />
+    <Content Include="Etc\etcTest.aspx" />
+    <Content Include="Etc\ImageButtonTest01.aspx" />
+    <Content Include="Etc\testPage.aspx" />
+    <Content Include="Etc\UcTest01.ascx" />
+    <Content Include="Etc\ViewStateTest01.aspx" />
+    <Content Include="HtmlStudy\test01.html" />
+    <Content Include="Json\JsonTest01.aspx" />
+    <Content Include="Js\angular.min.js" />
+    <Content Include="Js\jquery-1.9.0.js" />
+    <Content Include="Js\jquery-ui-1.10.0.min.js" />
+    <Content Include="Js\jquery.ui.timepicker.js" />
+    <Content Include="MultiLanguage\MultiLanguageTest01.aspx" />
+    <Content Include="PageLoad\PageLoad.aspx" />
+    <Content Include="TimePicker\TimePickerTest01.aspx" />
+    <Content Include="Uc\PaidevUserControl01.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Xml\Xml.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Xml\XmlTest01.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AngularJs\angularTest01.aspx.cs">
+      <DependentUpon>angularTest01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AngularJs\angularTest01.aspx.designer.cs">
+      <DependentUpon>angularTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Content.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Content.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Content.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Content.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Content.ko-KR.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Content.ko-KR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Cookie\CookieTest01.aspx.cs">
+      <DependentUpon>CookieTest01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cookie\CookieTest01.aspx.designer.cs">
+      <DependentUpon>CookieTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\Delegate.aspx.cs">
+      <DependentUpon>Delegate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\Delegate.aspx.designer.cs">
+      <DependentUpon>Delegate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\etcTest.aspx.cs">
+      <DependentUpon>etcTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\etcTest.aspx.designer.cs">
+      <DependentUpon>etcTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\ImageButtonTest01.aspx.cs">
+      <DependentUpon>ImageButtonTest01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\ImageButtonTest01.aspx.designer.cs">
+      <DependentUpon>ImageButtonTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\testPage.aspx.cs">
+      <DependentUpon>testPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\testPage.aspx.designer.cs">
+      <DependentUpon>testPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\UcTest01.ascx.cs">
+      <DependentUpon>UcTest01.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\UcTest01.ascx.designer.cs">
+      <DependentUpon>UcTest01.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\ViewStateTest01.aspx.cs">
+      <DependentUpon>ViewStateTest01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\ViewStateTest01.aspx.designer.cs">
+      <DependentUpon>ViewStateTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Json\JSONParser.cs" />
+    <Compile Include="Json\JsonTest01.aspx.cs">
+      <DependentUpon>JsonTest01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Json\JsonTest01.aspx.designer.cs">
+      <DependentUpon>JsonTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PaidevMaster01.Master.cs">
+      <DependentUpon>PaidevMaster01.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\PaidevMaster01.Master.designer.cs">
+      <DependentUpon>PaidevMaster01.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage\MultiLanguageTest01.aspx.cs">
+      <DependentUpon>MultiLanguageTest01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MultiLanguage\MultiLanguageTest01.aspx.designer.cs">
+      <DependentUpon>MultiLanguageTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageLoad\PageLoad.aspx.cs">
+      <DependentUpon>PageLoad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageLoad\PageLoad.aspx.designer.cs">
+      <DependentUpon>PageLoad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimePicker\TimePickerTest01.aspx.cs">
+      <DependentUpon>TimePickerTest01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TimePicker\TimePickerTest01.aspx.designer.cs">
+      <DependentUpon>TimePickerTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Uc\PaidevUserControl01.ascx.cs">
+      <DependentUpon>PaidevUserControl01.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Uc\PaidevUserControl01.ascx.designer.cs">
+      <DependentUpon>PaidevUserControl01.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Xml\XmlTest01.aspx.cs">
+      <DependentUpon>XmlTest01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xml\XmlTest01.aspx.designer.cs">
+      <DependentUpon>XmlTest01.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Master\PaidevMaster01.Master" />
+    <Content Include="Json\json.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Content.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Content.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Content.ko-KR.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Content.ko-KR.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Content.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Content.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55507/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

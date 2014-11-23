@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        div
+        {
+            background-color: red;
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color:green; border:1px solid purple;"></div>
+
+    <script>
+        var div = document.querySelector('div');        
+
+        // rgb(0, 128, 0) 또는 green이 출력됨: 인라인 element 스타일
+        console.log(window.getComputedStyle(div).backgroundColor);
+
+        // 1px solid rgb(128, 0, 128) 또는 1px solid purple이 출력됨
+        // 인라인 element 스타일
+        console.log(window.getComputedStyle(div).border);
+
+        // 100px가 출력됨: 인라인 스타일이 아님
+        console.log(window.getComputedStyle(div).height);
+
+        // 100px가 출력됨: 인라인 스타일이아님
+        console.log(window.getComputedStyle(div).width);
+    </script>
+</body>
+</html>

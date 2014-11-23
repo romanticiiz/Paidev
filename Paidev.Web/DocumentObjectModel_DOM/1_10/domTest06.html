@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <ul><!-- comment -->
+        <li id="A">foo</li>
+        <li id="B">bar</li>
+        <!-- comment -->
+    </ul>
+</body>
+    <script type="text/javascript">
+        // ul을 선택해서 저장
+        var ul = document.querySelector('ul');
+
+        // ul의 parentNode는?
+        console.log(ul.parentNode.nodeName);
+
+        // ul의 첫 번째 자식은?
+        console.log(ul.firstChild.nodeName);
+
+        // ul의 마지막 자식은?
+        console.log(ul.lastChild.nodeName);
+
+        // 첫 번째 li의 nextSibling은?
+        console.log(ul.querySelector('#A').nextSibling.nodeName);
+
+        // 마지막 li의 previousSibling은?
+        console.log(ul.querySelector('#B').previousSibling.nodeName);
+
+
+        // element만 탐색해야할때 아래와 같이 사용
+
+        // ul의 첫번째 자식은?
+        console.log(ul.firstElementChild.nodeName);
+
+        // ul의 마지막 자식은?
+        console.log(ul.lastElementChild.nodeName);
+
+        // 첫 번째 li의 nextSibling은?
+        console.log(ul.querySelector('#A').nextElementSibling.nodeName);
+
+        // 마지막 li의 previousSibling은?
+        console.log(ul.querySelector('#B').previousElementSibling.nodeName);
+
+        // ul의 자식 노드 중 element만을 가져오려면?
+        console.log(ul.children); // HTMLCollection이며, 모든 자식 노드는 text 노드를 가짐.
+
+        // 첫 번째 li의 부모 element는?
+        console.log(ul.firstElementChild.parentElement);
+    </script>
+</html>

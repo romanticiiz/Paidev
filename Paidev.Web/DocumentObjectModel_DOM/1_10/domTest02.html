@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <p>Hi</p>
+    <script>
+        // 임시 element 노드와 text 노드를 생성
+        var elementNode = document.createElement('strong');
+        var textNode = document.createTextNode(' Dude');
+
+        // 앞의 노드들을 DOM에 추가
+        document.querySelector('p').appendChild(elementNode);
+        document.querySelector('strong').appendChild(textNode);
+
+        // <p>Hi<strong> Dude</strong></p>이 출력됨.
+        console.log(document.body.innerHTML);
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿{
+	"name": "john",
+	"tellist": ["1234", "4321", "1111"],
+	"moreinfo":
+		{ "age": "10", "sex": "male", "city": "seoul" }
+}

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <ul>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <script>
+        // 텍스트 노드와 li element 노드를 생성해서 li에 텍스트를 추가한다.
+        var text1 = document.createTextNode('1');
+        var li = document.createElement('li');
+        li.appendChild(text1);
+
+        // 문서에서 ul을 선택한다
+        var ul = document.querySelector('ul');
+
+        /*
+            앞에서 생성한 li element를 DOM에 추가한다.
+            <ul>에 대해 ul.firstChild를 호출해서 <li>2</li>에 대한 참조를 전달하고 있다.
+        */
+        ul.insertBefore(li, ul.firstChild);
+
+        console.log(document.body.innerHTML);
+    </script>
+</body>
+</html>

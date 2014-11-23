@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <a href="#">Hi</a>
+
+    <script>
+        var anchor = document.querySelector('a');
+
+        // element 고유 속성
+        console.log(Object.keys(anchor).sort());
+
+        // element 고유 속성 및 상속받은 속성
+        var documentPropertiesIncludeInherited = [];
+        for (var p in document) {
+            documentPropertiesIncludeInherited.push(p);
+        }
+        console.log(documentPropertiesIncludeInherited.sort());
+
+        // element가 상속받은 속성만
+        var documentPropertiesOnlyInherited = [];
+        for (var p in document) {
+            if (!document.hasOwnProperty(p)) {
+                documentPropertiesOnlyInherited.push(p);
+            }
+        }
+        console.log(documentPropertiesOnlyInherited.sort());
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paidev.Framework", "Paidev.Framework\Paidev.Framework.csproj", "{BDCE24D7-57DF-4389-877E-290E40853E36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Paidev.Web", "Paidev.Web\Paidev.Web.csproj", "{EE1E37E0-8C68-4415-A52C-81FFB28A6947}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BDCE24D7-57DF-4389-877E-290E40853E36} = {BDCE24D7-57DF-4389-877E-290E40853E36}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDCE24D7-57DF-4389-877E-290E40853E36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDCE24D7-57DF-4389-877E-290E40853E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDCE24D7-57DF-4389-877E-290E40853E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDCE24D7-57DF-4389-877E-290E40853E36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE1E37E0-8C68-4415-A52C-81FFB28A6947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE1E37E0-8C68-4415-A52C-81FFB28A6947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE1E37E0-8C68-4415-A52C-81FFB28A6947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE1E37E0-8C68-4415-A52C-81FFB28A6947}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

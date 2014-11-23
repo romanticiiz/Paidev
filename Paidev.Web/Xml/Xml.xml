@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<main>
+  <main_node>
+    <class>1학년</class>
+    <class>2학년</class>
+    <class>3학년</class>
+    <class_name>
+      <code>예술반</code>
+      <code_name>미술</code_name>
+      <code_count>10명</code_count>
+      <class_teacher>
+        <teacher>홍길동 선생</teacher>
+        <teacher_sex>남자</teacher_sex>
+      </class_teacher>
+      <school>
+        <code>12345</code>
+        <code_name>예술학교</code_name>
+      </school>
+    </class_name>    
+  </main_node>
+</main>

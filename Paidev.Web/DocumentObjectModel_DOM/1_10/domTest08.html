@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+</head>
+<body>
+    <div></div>
+
+    <script>
+        var divStyle = document.querySelector('div').style;
+
+        // 설정
+        divStyle.backgroundColor = 'red';
+        divStyle.border = '1px solid black';
+        divStyle.width = '100px';
+        divStyle.height = '100px';
+
+        // 가져오기
+        console.log(divStyle.backgroundColor);
+        console.log(divStyle.border);
+        console.log(divStyle.width);
+        console.log(divStyle.height);
+
+        /* 제거
+        divStyle.backgroundColor = '';
+        divStyle.border = '';
+        divStyle.width = '';
+        divStyle.height = '';
+        */
+        
+    </script>
+</body>
+</html>

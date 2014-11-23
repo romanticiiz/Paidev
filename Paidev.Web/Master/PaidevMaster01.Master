@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaidevMaster01.master.cs" Inherits="Paidev.Web.Master.PaidevMaster01" %>
+
+<%@ Register Src="~/Uc/PaidevUserControl01.ascx" TagName="TopNav" TagPrefix="uc1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/Css/smoothness/jquery-ui-1.10.0.custom.css" />
+    <link rel="stylesheet" href="/Css/smoothness/include/ui-1.10.0/ui-lightness/jquery-ui-1.10.0.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="/Css/smoothness/jquery.ui.timepicker.css?v=0.3.2" type="text/css" />
+    <link rel="stylesheet" href="/Css/reset.css" type="text/css" />
+    <style>
+        .wrap { width: 1000px; }
+        .content { float: left; width: 680px; height: 500px; }
+        ul li { margin-bottom: 10px; }
+        .nav { margin: 0px 5px 5px 0px; float: left; width: 300px; height: 500px; }
+        .nav a:hover { background-color: red; }
+        .footer { clear: both; width: 1000px; text-align: center; }
+    </style>
+    <script type="text/javascript" src="/Js/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="/Js/jquery-ui-1.10.0.min.js"></script>
+    <script type="text/javascript" src="/Js/jquery.ui.timepicker.js?v=0.3.2"></script>
+    <asp:ContentPlaceHolder ID="cpHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrap">
+            <uc1:TopNav ID="topNav" runat="server" />
+            <div class="content">
+                <asp:ContentPlaceHolder ID="cpContents" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="footer">
+                Paidev Framework 
+            </div>
+        </div>
+    </form>
+</body>
+</html>

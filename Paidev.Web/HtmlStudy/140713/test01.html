@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>	
+	<!-- IpDisk_URL | http://romanticiiz.ipdisk.co.kr:7107/list/HDD1/_HtmlStudy/ -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><!-- Meta -->	
+	<script type="text/javascript" src="http://romanticiiz.cafe24.com/Js/jq-1.10.2.js"></script><!-- Jquery -->	
+	<script type="text/javascript">
+
+	</script>	
+	<link rel="stylesheet" type="text/css" href="http://romanticiiz.cafe24.com/Css/reset.css"/><!-- ResetStyle -->
+</head>
+<body onclick="console.log('fire/triger attribute event handler')">
+	<div>click me</div>
+	<script type="text/javascript">
+	var elementDiv = document.querySelector('div');
+
+	// 속성 이벤트 핸들러 패턴
+	elementDiv.onclick = function() {
+		console.log('fire/trigger property event handler');		
+	}
+
+	// addEventListener 메서드 패턴
+	elementDiv.addEventListener('click', function() {
+		console.log('fire/trigger addEventListener')
+	}, false);
+	</script>
+</body>
+</html>

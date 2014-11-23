@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>HTML</title>
+</head>
+<body>    
+    <div id="A"></div>
+    <div id="B"></div>
+    <span id="C"></span>
+    <div id="D"></div>
+    <div id="E"></div>
+    <script>
+        // strong element와 text 노드를 생성해서 DOM에 추가
+        document.getElementById('A').innerHTML = '<strong>Hi</strong>';
+
+        // div element와 text노드를 생성해서 <span id="B"></span>을 바꾼다(span#가 교체 된다).
+        document.getElementById('B').outerHTML = '<div id="B" class="New">Whats Shaking</div>';
+
+        // Text 노드를 생성해서 div#C를 갱신한다.
+        document.getElementById('C').textContent = 'dude';
+
+        // 다음의 innerText와 outerText는 비표준 확장이다.
+
+        // Text 노드를 생성해서 div#D를 갱신한다.
+        document.getElementById('D').innerText = 'Keep it';
+        // Text 노드를 생성해서 div#E를 Text 노드로 바꾼다(div#E가 사라진다는 점에 유의).
+        document.getElementById('E').outerText = 'real!';
+    </script>
+    <script>
+        // element 노드의 숫자 코드 값인 1이 출력됨.
+        //console.log(Node.ELEMENT_NODE);
+
+        // element 노드의 숫자 코드
+        //for (var key in Node) {
+        //    console.log(key, ' = ' + Node[key]);
+        //}
+
+        // 모든 노드 유형이 Node 개체로부터 속성 및 메서드를 상속받는다는 것을 검증하기 위해
+        // Element 노드 개체에 대해 루프를 돌면서 속성 및 메서드를 조사
+        // element 노드 개체에 대한 참조를 얻음.
+        //var nodeAnchor = document.querySelector('a');
+        //// element 노드 개체에 대한 속성 키를 저장하기 위한 props 배열을 생성
+        //var props = [];
+        //// element 노드 개체에 대해 루프를 돌면서 모든 속성 및 메서드(상속받은 것 포함)을 얻어냄.
+        //for (var key in nodeAnchor) {
+        //    props.push(key);
+        //}
+        //// 속성 및 메서드를 알파벳순으로 기록.
+        //console.log(props.sort());
+
+        //console.log(document.doctype.nodeName, document.doctype.nodeType);
+        //console.log(document.nodeName, document.nodeType);
+        //console.log(document.createDocumentFragment().nodeName, document.createDocumentFragment().nodeType);
+
+        //console.log(document.querySelector('a').firstChild.nodeValue);
+
+        //var elementNode = document.createElement('div');
+        //console.log(elementNode, elementNode.nodeType);
+
+        //var textNode = document.createTextNode('Hi');
+        //console.log(textNode, textNode.nodeType);
+    </script>    
+</body>
+</html>

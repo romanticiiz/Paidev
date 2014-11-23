@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UcTest01.ascx.cs" Inherits="Paidev.Web.Etc.UcTest01" %>
+<asp:ImageButton ID="ImgBtnTest" runat="server" OnClick="ImgBtnTest_Click" OnClientClick="testFunction(); testFunction2();" AlternateText="다음단계로" />

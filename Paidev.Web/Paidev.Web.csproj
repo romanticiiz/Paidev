@@ -126,7 +126,9 @@
     </Content>
     <Content Include="Xml\XmlTest01.aspx" />
     <Content Include="_Sample\Log\FileLog.aspx" />
-    <Content Include="_Sample\Log\Log.xml" />
+    <Content Include="_Sample\Log\Log.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AngularJs\angularTest01.aspx.cs">

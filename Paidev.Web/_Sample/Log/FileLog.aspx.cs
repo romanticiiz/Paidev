@@ -18,11 +18,13 @@ namespace Paidev.Web._Sample.Log
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            // XML데이터 가져오기
             GetXmlData();
         }
 
         protected void btnLog_Button(object sender, EventArgs e)
         {
+            // 파일로그 사용
             log.FileLog(logBool, logPath, "로그테스트");
         }
 

@@ -5,6 +5,6 @@
     <!-- 필수 수정 Start -->
     <!-- true: 파일로그 사용O, false: 파일로그 사용 X -->
     <log_bool>true</log_bool>
-    <log_path>\\_Sameple\\Log\\TxtLog</log_path>
+    <log_path>\\_Sample\\Log\\TxtLog</log_path>
   </log_node>
 </log>

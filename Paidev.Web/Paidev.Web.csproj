@@ -108,6 +108,7 @@
     <Content Include="Etc\etcTest.aspx" />
     <Content Include="Etc\ImageButtonTest01.aspx" />
     <Content Include="Etc\testPage.aspx" />
+    <Content Include="Etc\TextBoxTest.aspx" />
     <Content Include="Etc\UcTest01.ascx" />
     <Content Include="Etc\ViewStateTest01.aspx" />
     <Content Include="HtmlStudy\test01.html" />
@@ -194,6 +195,13 @@
     </Compile>
     <Compile Include="Etc\testPage.aspx.designer.cs">
       <DependentUpon>testPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\TextBoxTest.aspx.cs">
+      <DependentUpon>TextBoxTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\TextBoxTest.aspx.designer.cs">
+      <DependentUpon>TextBoxTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Etc\UcTest01.ascx.cs">
       <DependentUpon>UcTest01.ascx</DependentUpon>

@@ -104,9 +104,11 @@
     <Content Include="DocumentObjectModel_DOM\1_10\domTest09.html" />
     <Content Include="DocumentObjectModel_DOM\1_10\domTest10.html" />
     <Content Include="DocumentObjectModel_DOM\domTest01.html" />
+    <Content Include="Etc\ajaxFileUpload.aspx" />
     <Content Include="Etc\Delegate.aspx" />
     <Content Include="Etc\etcTest.aspx" />
     <Content Include="Etc\ImageButtonTest01.aspx" />
+    <Content Include="Etc\smarteditor.aspx" />
     <Content Include="Etc\testPage.aspx" />
     <Content Include="Etc\TextBoxTest.aspx" />
     <Content Include="Etc\UcTest01.ascx" />
@@ -119,6 +121,53 @@
     <Content Include="Js\jquery.ui.timepicker.js" />
     <Content Include="MultiLanguage\MultiLanguageTest01.aspx" />
     <Content Include="PageLoad\PageLoad.aspx" />
+    <Content Include="se2\css\smart_editor2.css" />
+    <Content Include="se2\css\smart_editor2_in.css" />
+    <Content Include="se2\css\smart_editor2_items.css" />
+    <Content Include="se2\css\smart_editor2_out.css" />
+    <Content Include="se2\img\bg_b1.png" />
+    <Content Include="se2\img\bg_button.gif" />
+    <Content Include="se2\img\bg_button_left.gif" />
+    <Content Include="se2\img\bg_button_right.gif" />
+    <Content Include="se2\img\bg_find_h3.gif" />
+    <Content Include="se2\img\bg_help.gif" />
+    <Content Include="se2\img\bg_icon_tool.gif" />
+    <Content Include="se2\img\bg_line1.gif" />
+    <Content Include="se2\img\bg_quote2.gif" />
+    <Content Include="se2\img\bg_set.gif" />
+    <Content Include="se2\img\bg_text_tool.gif" />
+    <Content Include="se2\img\bg_tool2.gif" />
+    <Content Include="se2\img\editor_guideline_698.gif" />
+    <Content Include="se2\img\editor_guideline_890.gif" />
+    <Content Include="se2\img\icon_set.gif" />
+    <Content Include="se2\img\ico_extend.png" />
+    <Content Include="se2\img\ko_KR\btn_set.png" />
+    <Content Include="se2\img\ko_KR\bx_set_110302.gif" />
+    <Content Include="se2\img\ko_KR\text_tool_set.png" />
+    <Content Include="se2\img\photoQuickPopup\bg_drag_image.png" />
+    <Content Include="se2\img\photoQuickPopup\btn_cancel.png" />
+    <Content Include="se2\img\photoQuickPopup\btn_confirm.png" />
+    <Content Include="se2\img\photoQuickPopup\btn_confirm2.png" />
+    <Content Include="se2\img\photoQuickPopup\btn_del.png" />
+    <Content Include="se2\img\photoQuickPopup\btn_find.png" />
+    <Content Include="se2\img\text_tool_set2.png" />
+    <Content Include="se2\js\HuskyEZCreator.js" />
+    <Content Include="se2\js\jindo.min.js" />
+    <Content Include="se2\js\jindo_component.js" />
+    <Content Include="se2\js\SE2BasicCreator.js" />
+    <Content Include="se2\js\SE2B_Configuration_General.js" />
+    <Content Include="se2\js\SE2B_Configuration_Service.js" />
+    <Content Include="se2\js\smarteditor2.js" />
+    <Content Include="se2\js\smarteditor2.min.js" />
+    <Content Include="se2\photo_uploader\plugin\hp_SE2M_AttachQuickPhoto.js" />
+    <Content Include="se2\photo_uploader\popup\attach_photo.js" />
+    <Content Include="se2\photo_uploader\popup\callback.html" />
+    <Content Include="se2\photo_uploader\popup\jindo.fileuploader.js" />
+    <Content Include="se2\photo_uploader\popup\jindo.min.js" />
+    <Content Include="se2\photo_uploader\popup\photo_uploader.html" />
+    <Content Include="se2\SmartEditor2Skin.html" />
+    <Content Include="se2\smart_editor2_inputarea.html" />
+    <Content Include="se2\smart_editor2_inputarea_ie8.html" />
     <Content Include="TimePicker\TimePickerTest01.aspx" />
     <Content Include="Uc\PaidevUserControl01.ascx" />
     <Content Include="Web.config" />
@@ -168,6 +217,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Etc\ajaxFileUpload.aspx.cs">
+      <DependentUpon>ajaxFileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\ajaxFileUpload.aspx.designer.cs">
+      <DependentUpon>ajaxFileUpload.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Etc\Delegate.aspx.cs">
       <DependentUpon>Delegate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -188,6 +244,13 @@
     </Compile>
     <Compile Include="Etc\ImageButtonTest01.aspx.designer.cs">
       <DependentUpon>ImageButtonTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\smarteditor.aspx.cs">
+      <DependentUpon>smarteditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\smarteditor.aspx.designer.cs">
+      <DependentUpon>smarteditor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Etc\testPage.aspx.cs">
       <DependentUpon>testPage.aspx</DependentUpon>
@@ -279,6 +342,8 @@
   <ItemGroup>
     <Content Include="Master\PaidevMaster01.Master" />
     <Content Include="Json\json.json" />
+    <Content Include="se2\photo_uploader\popup\file_uploader.php" />
+    <Content Include="se2\photo_uploader\popup\file_uploader_html5.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

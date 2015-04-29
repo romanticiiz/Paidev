@@ -65,5 +65,37 @@ namespace Paidev.Web.Etc
 
             //string fileUrl = Server.MapPath("/Upload_img/");
         }
+
+        private static string Base62CodingSpace = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+        public static string Base62Encode(long input)
+        {
+            string r = string.Empty;
+            int targetBase = Base62CodingSpace.Length;
+            do
+            {
+                r = string.Format("{0}{1}",
+                    Base62CodingSpace[(int)(input % targetBase)],
+                    r);
+                input /= targetBase;
+            } while (input > 0);
+
+            return r;
+        }
+
+        public static long Base62Decode(string input)
+        {
+            int srcBase = Base62CodingSpace.Length;
+            long id = 0;
+            string r = new string(input.ToCharArray().Reverse().ToArray());
+
+            for (int i = 0; i < r.Length; i++)
+            {
+                int charIndex = Base62CodingSpace.IndexOf(r[i]);
+                id += charIndex * (long)Math.Pow(srcBase, i);
+            }
+
+            return id;
+        }
     }
 }

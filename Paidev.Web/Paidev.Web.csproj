@@ -107,12 +107,16 @@
     <Content Include="Etc\ajaxFileUpload.aspx" />
     <Content Include="Etc\Delegate.aspx" />
     <Content Include="Etc\etcTest.aspx" />
+    <Content Include="Etc\historyApiList.aspx" />
+    <Content Include="Etc\historyApiView.aspx" />
     <Content Include="Etc\ImageButtonTest01.aspx" />
+    <Content Include="Etc\list.aspx" />
     <Content Include="Etc\smarteditor.aspx" />
     <Content Include="Etc\testPage.aspx" />
     <Content Include="Etc\TextBoxTest.aspx" />
     <Content Include="Etc\txtFileLoad.aspx" />
     <Content Include="Etc\UcTest01.ascx" />
+    <Content Include="Etc\view.aspx" />
     <Content Include="Etc\ViewStateTest01.aspx" />
     <Content Include="HtmlStudy\test01.html" />
     <Content Include="HtmlStudy\test02.html" />
@@ -120,6 +124,7 @@
     <Content Include="Js\angular.min.js" />
     <Content Include="Js\jquery-1.9.0.js" />
     <Content Include="Js\jquery-ui-1.10.0.min.js" />
+    <Content Include="Js\jquery.pjax.js" />
     <Content Include="Js\jquery.ui.timepicker.js" />
     <Content Include="MultiLanguage\MultiLanguageTest01.aspx" />
     <Content Include="PageLoad\PageLoad.aspx" />
@@ -240,12 +245,33 @@
     <Compile Include="Etc\etcTest.aspx.designer.cs">
       <DependentUpon>etcTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Etc\historyApiList.aspx.cs">
+      <DependentUpon>historyApiList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\historyApiList.aspx.designer.cs">
+      <DependentUpon>historyApiList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\historyApiView.aspx.cs">
+      <DependentUpon>historyApiView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\historyApiView.aspx.designer.cs">
+      <DependentUpon>historyApiView.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Etc\ImageButtonTest01.aspx.cs">
       <DependentUpon>ImageButtonTest01.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Etc\ImageButtonTest01.aspx.designer.cs">
       <DependentUpon>ImageButtonTest01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
     </Compile>
     <Compile Include="Etc\smarteditor.aspx.cs">
       <DependentUpon>smarteditor.aspx</DependentUpon>
@@ -281,6 +307,13 @@
     </Compile>
     <Compile Include="Etc\UcTest01.ascx.designer.cs">
       <DependentUpon>UcTest01.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\view.aspx.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Etc\view.aspx.designer.cs">
+      <DependentUpon>view.aspx</DependentUpon>
     </Compile>
     <Compile Include="Etc\ViewStateTest01.aspx.cs">
       <DependentUpon>ViewStateTest01.aspx</DependentUpon>

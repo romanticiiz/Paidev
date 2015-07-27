@@ -122,6 +122,7 @@
     <Content Include="HtmlStudy\test02.html" />
     <Content Include="Json\JsonTest01.aspx" />
     <Content Include="Js\angular.min.js" />
+    <Content Include="Js\fnObj.js" />
     <Content Include="Js\jquery-1.9.0.js" />
     <Content Include="Js\jquery-ui-1.10.0.min.js" />
     <Content Include="Js\jquery.pjax.js" />

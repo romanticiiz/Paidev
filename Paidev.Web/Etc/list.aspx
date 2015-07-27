@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <script type="text/javascript" src="/Js/jquery-1.9.0.js"></script>    
+    <script type="text/javascript" src="/Js/fnObj.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             $('.container a').on('click', function (e) {
@@ -26,6 +27,10 @@
                 history.pushState({ page: pageUrl }, 'title', pageUrl);
 
                 return false;
+            });
+
+            $('.btn').on('click', function (e) {                
+                fnObj.fn.addEvent(fnObj.set.tt);
             });
         });
 
@@ -53,6 +58,7 @@
         <div class="container">
             <p><a href="list.aspx"><b>List Page</b></a></p>
             <p><a href="view.aspx">View Page</a></p>
+            <p><button type="button" class="btn">테스트버튼</button></p>
         </div>        
     </div>
     </form>

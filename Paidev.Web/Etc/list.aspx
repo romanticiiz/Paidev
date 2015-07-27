@@ -30,7 +30,9 @@
             });
 
             $('.btn').on('click', function (e) {                
-                fnObj.fn.addEvent(fnObj.set.tt);
+                var obj = new fnObj.fn.setArticle(95, 3);
+
+                alert(obj.n4BoardSN);
             });
         });
 

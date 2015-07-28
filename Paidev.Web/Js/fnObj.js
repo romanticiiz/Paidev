@@ -1,5 +1,10 @@
 ﻿var fnObj = fnObj || {};
-fnObj.fn = {
+fnObj.val = {
+    setCommentElement: function (n4BoardSN) {
+        this.n4BoardSN = n4BoardSN;
+    }
+},
+fnObj.fn = {    
     addEvent: function (a) {
         alert(a);
     },

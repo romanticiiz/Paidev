@@ -30,9 +30,9 @@
             });
 
             $('.btn').on('click', function (e) {                
-                var obj = new fnObj.fn.setArticle(95, 3);
-
-                alert(obj.n4BoardSN);
+                fnObj.val.setCommentElement(9898);
+                fnObj.val.n4BoardSN = 7777;
+                alert(fnObj.val.n4BoardSN);
             });
         });
 

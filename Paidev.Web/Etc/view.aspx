@@ -6,44 +6,15 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <script type="text/javascript" src="/Js/jquery-1.9.0.js"></script>    
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.container a').on('click', function (e) {
-                //e.preventDefault();
-
-                var pageUrl = $(this).attr('href');
-
-                // 호출 URL Ajax통신
-                $.ajax({
-                    url: pageUrl,
-                    success: function (data) {
-                        $('.container').html(data);
-                    }
-                });
-
-                // 현재 URL과 Ajax통신 URL이 다르면 URL 저장
-                history.pushState({ page: pageUrl }, 'title', pageUrl);
-
-                return false;
-            });
-        });
-
-        window.onpopstate = function (event) {
-            loadStateContent(event.state);
-        };
-
-        function loadStateContent(state) {
-            alert(state.page);
-        }
-    </script>
+    <script type="text/javascript" src="/Js/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="/Js/fnObj.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <div class="container">
-            <p><a href="list.aspx">List Page</a></p>
-            <p><a href="view.aspx"><b>View Page</b></a></p>
+    <div id="ajaxContents">
+        <div id="contents" class="boardView">
+            <p><b><%=n4ArticleSN %>번글 뷰페이지</b></p>
+            <p><a href="#" onclick="history.back(); return false;">뒤로가기</a></p>
         </div>        
     </div>
     </form>

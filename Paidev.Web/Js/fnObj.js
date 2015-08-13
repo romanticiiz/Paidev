@@ -1,46 +1,64 @@
 ﻿var fnObj = fnObj || {};
-fnObj.val = {
-    setCommentElement: function (n4BoardSN) {
-        this.n4BoardSN = n4BoardSN;
+fnObj.ajax = {
+    history: {
+        init: function() {
+            var a = $('#ajaxContents').find(".boardView").length ? "view" : "list";
+
+            fnObj.ajax.history.replace({
+                type: a
+                , url: document.URL
+            })
+            , window.onpopstate = function (e) {
+                e.state && (fnObj.ajax.load({
+                    type: e.state.type,
+                    url: e.state.url,
+                    popstate: !0
+                }))
+            }
+        }
+        , push: function (obj) {
+            history.pushState({
+                type: obj.type
+                , url: obj.url                
+            }, "", obj.url)
+        }
+        , replace: function (obj) {
+            history.replaceState({
+                type: obj.type
+                , url: obj.url
+            }, "", obj.url)
+        }
     }
-},
-fnObj.fn = {    
-    addEvent: function (a) {
-        alert(a);
-    },
-    living: true,
-    age: 33,
-    getLiving: function () {
-        return fnObj.fn.living;
-    },
-    setArticle: function (n4BoardSN, n4CommentSN) {
-        this.n4BoardSN = n4BoardSN,
-        this.n4CommentSN = n4CommentSN
+    , load: function (obj) {
+        $.ajax({
+            type: "POST"
+            , url: obj.url
+            , success: function (data) {
+                var tmp = $("<html />").html(data);
+                
+                // history
+                !obj.popstate && fnObj.ajax.history.push({                    
+                    type: obj.type,
+                    url: obj.url,                    
+                });
+
+                var contents = tmp.find('#contents');
+
+                $('#contents').hide();
+                $('#ajaxContents').html(contents);
+            }
+        });
     }
-}, fnObj.set = function () {
-    var t = '나는 변수 t이다.'
-    t2 = '나는 변수 t2이다.';
-    return {
-        tt: t
-    }
-}()
+}
 
-//var codyA = new Object();
-//codyA.living = true;
-//codyA.age = 33;
-//codyA.gender = 'mail';
-//codyA.getGender = function () {
-//    return codyA.gender;
-//};
+$(document).ready(function () {
+    // historyInit
+    fnObj.ajax.history.init();
 
-
-//var Person = function (living, age, gender) {
-//    this.living = living;
-//    this.age = age;
-//    this.gender = gender;
-//    this.getGender = function () {
-//        return this.gender;
-//    };
-//};
-
-//var codyB = new Person(true, 33, 'male');
+    $(document).on('click', 'a[data-ajax-board]', function (e) {
+        fnObj.ajax.load({
+            type: $(this).attr("data-ajax-board")
+            , url: $(this).attr("href")
+        }), e.preventDefault()
+    });
+});

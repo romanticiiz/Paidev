@@ -8,59 +8,17 @@
     <title></title>
     <script type="text/javascript" src="/Js/jquery-1.9.0.js"></script>    
     <script type="text/javascript" src="/Js/fnObj.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('.container a').on('click', function (e) {
-                //e.preventDefault();
-
-                var pageUrl = $(this).attr('href');
-
-                // 호출 URL Ajax통신
-                $.ajax({
-                    url: pageUrl,
-                    success: function (data) {
-                        $('.container').html(data);
-                    }
-                });
-
-                // 현재 URL과 Ajax통신 URL이 다르면 URL 저장
-                history.pushState({ page: pageUrl }, 'title', pageUrl);
-
-                return false;
-            });
-
-            $('.btn').on('click', function (e) {                
-                fnObj.val.setCommentElement(9898);
-                fnObj.val.n4BoardSN = 7777;
-                alert(fnObj.val.n4BoardSN);
-            });
-        });
-
-        window.onpopstate = function (event) {
-            loadStateContent(event.state);
-        };
-
-        function loadStateContent(state) {
-            alert(state.page);
-        }
-
-        //window.onpopstate = function (event) {
-        //    loadStateContent(event.state);
-        //};
-
-        //function loadStateContent(state) {
-        //    var con = document.getElementById("contents");
-        //    con.innerHTML = "복구된 " + state.page + "페이지 " + "hello" + state.name;
-        //}
-    </script>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <div class="container">
-            <p><a href="list.aspx"><b>List Page</b></a></p>
-            <p><a href="view.aspx">View Page</a></p>
-            <p><button type="button" class="btn">테스트버튼</button></p>
+    <div id="ajaxContents">
+        <div id="contents" class="boardList">
+            <p><a href="view.aspx?n4ArticleSN=1" data-ajax-board="view">1번글</a></p>
+            <p><a href="view.aspx?n4ArticleSN=2" data-ajax-board="view">2번글</a></p>            
+            <p><a href="view.aspx?n4ArticleSN=3" data-ajax-board="view">3번글</a></p>            
+            <p><a href="view.aspx?n4ArticleSN=4" data-ajax-board="view">4번글</a></p>            
+            <p><a href="view.aspx?n4ArticleSN=5" data-ajax-board="view">5번글</a></p>            
+            <p><a href="view.aspx?n4ArticleSN=6" data-ajax-board="view">6번글</a></p>            
         </div>        
     </div>
     </form>

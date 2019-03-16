@@ -14,21 +14,36 @@
         <button type="button" :disabled="isButtonDisabled">버튼</button>
         <p :id="strId">{{ strName }}</p>
 
-        <my-component></my-component>
+        <my-component message="이렇게 변수를 바꾼다."></my-component>
     </div>
 
     <script>
+        // Vue.component('my-component', {
+        //     template: '<div>사용자 정의 컴포넌트</div>'
+        // })
+
         var data = {
             isButtonDisabled: false
             , strName: '문자열을 저장합니다.'
-            , strId: 'idArea'
+            , strId: 'idArea'            
+        }
+
+        var Child = {
+            props: ['message']
+            , template: '<div>사용자 정의 컴포넌트 - {{ message }}</div>'
+            // , data: function() {
+            //     return {
+            //         strName: '별도변수'
+            //     }
+            // }
         }
 
         var vueApp = new Vue({
             el: '#app'
             , data: data
-        }).component('my-component', {
-            template: '<div>사용자 정의 컴포넌트</div>'
+            , components: {
+                'my-component': Child
+            }
         })
     </script>
 </body>

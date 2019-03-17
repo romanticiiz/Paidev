@@ -12,9 +12,11 @@
 <body>
     <div id="app">
         <button type="button" :disabled="isButtonDisabled">버튼</button>
-        <p :id="strId">{{ strName }}</p>
+        <p :id="strId">{{ parentMsg }}</p>
 
-        <my-component message="이렇게 변수를 바꾼다."></my-component>
+        <input v-model="parentMsg">
+
+        <my-component message="이렇게 변수를 바꾼다." :my-message="parentMsg"></my-component>
     </div>
 
     <script>
@@ -25,12 +27,13 @@
         var data = {
             isButtonDisabled: false
             , strName: '문자열을 저장합니다.'
-            , strId: 'idArea'            
+            , strId: 'idArea'  
+            , parentMsg: ''          
         }
 
-        var Child = {
-            props: ['message']
-            , template: '<div>사용자 정의 컴포넌트 - {{ message }}</div>'
+        var Child = {            
+            template: '<div>사용자 정의 컴포넌트 - {{ message }} - {{ myMessage }}</div>'
+            , props: ['message', 'myMessage']            
             // , data: function() {
             //     return {
             //         strName: '별도변수'

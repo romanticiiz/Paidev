@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="C:\Users\GamePc\Desktop\_\Git\Paidev\Vue\js\vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <my-component></my-component>
+        <my-component2></my-component2>
+
+        <input v-model="parentMsg">
+        <datacomponent prop1-value="문자열을 전달합니다" :prop2-parentmsg="parentMsg"></datacomponent>
+
+        <databindcomponent v-bind="todo"></databindcomponent>
+    </div>
+
+    <script>
+        // 지역으로 등록하는 방법
+        var Child = {
+            template: '<div>지역 사용자정의 컴포넌트!</div>'
+        }
+
+        var Child2 = {
+            template: '<div>지역 컴포넌트2 입니다!</div>'
+        }
+
+        var data = {
+            message: '나는 컴포넌트의 데이터변수입니다.'
+            , parentMsg: ''
+            , todo: {
+                text: 'Learn Vue',
+                isComplete: false
+            }
+        }
+
+        var DataTest = {
+            props: ['prop1Value', 'prop2Parentmsg']
+            , todo: {
+                text: 'Learn Vue',
+                isComplete: false
+            }
+            , template: '<span><br>{{ message }}-{{ prop1Value }}-{{ prop2Parentmsg }}</span>'
+            , data: function() {
+                return data
+            }
+        }
+
+        var DataTest2 = {
+            props: data.todo
+            , template: '<span><br>나는 todo 테스트: {{ text }}</span>'            
+        }
+
+        new Vue({
+            el: '#app'
+            , data: data
+            , components: {
+                'my-component': Child
+                , 'my-component2': Child2
+                , 'datacomponent': DataTest
+                , 'databindcomponent': DataTest2
+            }
+        })
+
+        // 전역으로 등록하는 방법
+        // Vue.component('my-component', {
+        //     template: '<div>사용자 정의 컴포넌트 입니다!</div>'
+        // })
+
+        // new Vue({
+        //     el: '#app'
+        // })
+    </script>
+</body>
+
+</html>

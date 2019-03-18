@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://unpkg.com/vue@2.6.8/dist/vue.js"></script>
+    <style>
+        #list { width: 400px; border: 1px solid black; border-collapse: collapse; }
+        #list td, #list th { border: 1px solid black; text-align: pcenter; }
+        #list > thead > tr { color: yellow; background-color: purple; }
+        .divider { height: 2px; background-color: gray; }
+    </style>
+</head>
+<body>
+    <div id="exmaple">
+        <table id="list">
+            <thead>
+                <tr>
+                    <th>번호</th><th>이름</th><th>전화번호</th><th>주소</th>
+                </tr>
+            </thead>
+            <tbody id="contacts">
+                <template v-for="(contact, index) in contacts">
+                    <tr>
+                        <td>{{contact.no}}</td>
+                        <td>{{contact.name}}</td>
+                        <td>{{contact.tel}}</td>
+                        <td>{{contact.address}}</td>
+                    </tr>
+                    <tr class="divider" v-if="index % 5 === 4">
+                        <td colspan="4"></td>
+                    </tr>
+                </template>                
+            </tbody>
+        </table>
+    </div>
+
+
+    <script type="text/javascript">
+        var model = {
+            "pageno": 1,
+            "pagesize": 10,
+            "totalcount": 100,
+            "contacts": [
+                { "no": 100, "name": "설현", "tel": "010-3456-8299", "address": "서울" },
+                { "no": 99, "name": "설현1", "tel": "010-3456-8299", "address": "경기" },
+                { "no": 98, "name": "설현2", "tel": "010-3456-8299", "address": "인천" },
+                { "no": 97, "name": "설현3", "tel": "010-3456-8299", "address": "서울" },
+                { "no": 96, "name": "설현4", "tel": "010-3456-8299", "address": "서울" },
+                { "no": 95, "name": "설현5", "tel": "010-3456-8299", "address": "강원" },
+                { "no": 94, "name": "설현6", "tel": "010-3456-8299", "address": "제주" },
+                { "no": 93, "name": "설현7", "tel": "010-3456-8299", "address": "서울" },
+                { "no": 92, "name": "설현8", "tel": "010-3456-8299", "address": "부산" },
+                { "no": 91, "name": "설현9", "tel": "010-3456-8299", "address": "대구" }                
+            ]
+        }
+
+        var list = new Vue({
+            el: "#exmaple",
+            data: model
+        });        
+    </script>
+</body>
+</html>

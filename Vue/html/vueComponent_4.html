@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.6.8/dist/vue.js"></script>
+</head>
+
+<template id="listTemplate">
+    <div>{{ message }}</div>
+</template>
+<script type="text/javascript">
+    Vue.component('list-component', {
+        template: '#listTemplate'
+        , props: {
+            message: { type: String, default: '안녕하세요' }
+            , count: { type: Number, required: true }
+            , countries: {
+                type: Array
+                , default: function() {
+                    return ['대한민국'];
+                }
+            }
+        }
+    })
+</script>
+
+<body>
+    <div id="app">
+        <list-component message="Hello" v-bind:count="100" :countries="['미국', '영국', '호주']"></list-component>
+        <list-component message="씬짜오" :count="21" :countries="['베트남']"></list-component>
+        <list-component message="니하오마" :countries="['중국', '타이완']"></list-component>
+        <list-component :count="1000"></list-component>
+    </div>
+
+    <script>
+        var vm = new Vue ({
+            el: "#app"
+        })
+    </script>
+</body>
+
+</html>

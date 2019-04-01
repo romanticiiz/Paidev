@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@2.6.8/dist/vue.js"></script>
 </head>
 
 <!-- Child Component 시작 -->
 <style>
-    .buttonstyle { width: 120px; height: 30px; text-align: center; }    
+    .buttonstyle {
+        width: 120px;
+        height: 30px;
+        text-align: center;
+    }
 </style>
 <template id="childTemplate">
     <div>
-        <button class="buttonstyle" v-on:click="clickEvent" v-bind:data-lang="buttonInfo.value">{{ buttonInfo.text }}</button>
+        <button class="buttonstyle" v-on:click="clickEvent"
+            v-bind:data-lang="buttonInfo.value">{{ buttonInfo.text }}</button>
     </div>
 </template>
 <script type="text/javascript">
@@ -23,7 +30,7 @@
         template: '#childTemplate'
         , props: ['buttonInfo']
         , methods: {
-            clickEvent: function(e) {
+            clickEvent: function (e) {
                 this.$emit('timeclick', e.target.innerText, e.target.dataset.lang);
             }
         }
@@ -43,11 +50,11 @@
     Vue.component('parent-component', {
         template: '#parent-template'
         , props: ['buttons']
-        , data: function() {
+        , data: function () {
             return { msg: "" };
         }
         , methods: {
-            timeclickEvent: function(k, v) {
+            timeclickEvent: function (k, v) {
                 this.msg = k + ", " + v;
             }
         }
@@ -67,7 +74,7 @@
                 buttons: [
                     { text: "Hello", value: "영어" },
                     { text: "씬짜오", value: "베트남어" },
-                    { text: "니하오",  value: "중국어" }
+                    { text: "니하오", value: "중국어" }
                 ]
             }
         })
